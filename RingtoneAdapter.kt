@@ -15,7 +15,7 @@ class RingtoneAdapter(
 ) : RecyclerView.Adapter<RingtoneAdapter.RingtoneViewHolder>() {
 
     class RingtoneViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val tvRingtoneName: TextView = view.findViewById(R.id.tvRingtoneName)
+        val tvName: TextView = view.findViewById(R.id.tvRingtoneName)
         val btnPlay: ImageButton = view.findViewById(R.id.btnPlay)
         val btnDownload: ImageButton = view.findViewById(R.id.btnDownload)
         val btnShare: ImageButton = view.findViewById(R.id.btnShare)
@@ -29,7 +29,7 @@ class RingtoneAdapter(
 
     override fun onBindViewHolder(holder: RingtoneViewHolder, position: Int) {
         val ringtone = ringtones[position]
-        holder.tvRingtoneName.text = ringtone.name
+        holder.tvName.text = ringtone.name
 
         holder.btnPlay.setOnClickListener { onPlayClick(ringtone) }
         holder.btnDownload.setOnClickListener { onDownloadClick(ringtone) }
